@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>cookiee</title>
+</head>
+<body onload="hasCookie()">
+    <label for="username">Enter your name: </label>
+     <input type="text" name="username" id="username">
+<br>
+     <label for="age">Enter your age: </label>
+     <input type="text" name="age" id="age">
+     <br>
+
+     <label >Select your gender </label>
+
+     <label for="male">
+        <img src="images/1.jpg">
+     </label>
+     <input type="radio" name="gender" id="male" value="male">
+     <label for="female">
+        <img src="images/2.jpg">
+     </label>
+     <input type="radio" name="gender" id="female" value="female">
+     <br>
+
+     <label>Select your favorite color : </label>
+     <select id="favcolor">
+        <option name="color" value="Red">Red</option>
+        <option name="color"  value="Green">Green</option>
+        <option name="color" value="Yellow">yellow</option>
+        <option name="color" value="Blue">Blue</option>
+     </select>
+     <br>
+
+     <button onclick="showInfo()">register</button>
+     <script src="cookiescript.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>
