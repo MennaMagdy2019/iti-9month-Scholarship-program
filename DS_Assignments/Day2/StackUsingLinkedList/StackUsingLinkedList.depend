@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1670484358 source:e:\iti-9-month\ds\lab\day2\stackusinglinkedlist\main.cpp
+	<iostream>
+	<Stack.h>
+
+1670458560 e:\iti-9-month\ds\lab\day2\stackusinglinkedlist\include\stack.h
+	<bits/stdc++.h>
+	<iostream>
+	<Node.h>
+
+1670456244 e:\iti-9-month\ds\lab\day2\stackusinglinkedlist\include\node.h
+

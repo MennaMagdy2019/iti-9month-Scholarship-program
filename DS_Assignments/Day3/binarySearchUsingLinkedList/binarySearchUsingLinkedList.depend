@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1670574999 source:e:\iti-9-month\ds\lab\day3\binarysearchusinglinkedlist\main.cpp
+	<iostream>
+	<BinarySearch.h>
+
+1670575054 e:\iti-9-month\ds\lab\day3\binarysearchusinglinkedlist\include\binarysearch.h
+	<Node.h>
+
+1670572957 e:\iti-9-month\ds\lab\day3\binarysearchusinglinkedlist\include\node.h
+

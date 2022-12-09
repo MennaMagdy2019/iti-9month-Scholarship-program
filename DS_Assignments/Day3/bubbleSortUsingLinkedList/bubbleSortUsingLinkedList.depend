@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1670548355 source:e:\iti-9-month\ds\lab\day3\bubblesortusinglinkedlist\main.cpp
+	<iostream>
+	<Sorting.h>
+
+1670548336 e:\iti-9-month\ds\lab\day3\bubblesortusinglinkedlist\include\sorting.h
+	<iostream>
+	<Node.h>
+
+1670548197 e:\iti-9-month\ds\lab\day3\bubblesortusinglinkedlist\include\node.h
+

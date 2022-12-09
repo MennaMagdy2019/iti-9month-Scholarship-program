@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1670598053 source:e:\iti-9-month\ds\lab\day3\binarysearchtree\main.cpp
+	<iostream>
+	<BinarySearchTree.h>
+
+1670598375 e:\iti-9-month\ds\lab\day3\binarysearchtree\include\binarysearchtree.h
+	<iostream>
+	"Node.h"
+
+1670596102 e:\iti-9-month\ds\lab\day3\binarysearchtree\include\node.h
+

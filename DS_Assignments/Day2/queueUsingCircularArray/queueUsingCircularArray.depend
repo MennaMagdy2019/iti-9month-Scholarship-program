@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1670621289 source:e:\iti-9-month\ds\lab\day2\queueusingcirculararray\main.cpp
+	<iostream>
+	<Queue.h>
+
+1670621862 e:\iti-9-month\ds\lab\day2\queueusingcirculararray\include\queue.h
+	<iostream>
+
