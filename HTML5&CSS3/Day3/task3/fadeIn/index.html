@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadingInOut</title>
+    <style>
+        @keyframes myPhoto {
+            from{
+               opacity: 1;
+            }
+            to{
+               opacity: 0;
+            }
+        }
+
+        #img1{
+            display: block;
+            opacity: 1;
+           
+        }
+        #img1:hover{
+            animation-name: myPhoto;
+            animation-delay: 2s;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-iteration-count: 5;
+            transition: all 2s;
+        }
+    </style>
+</head>
+<body>
+    <img id="img1" src="../images/overflow.jpg"  width="400" height="400"/>
+</body>
+</html>

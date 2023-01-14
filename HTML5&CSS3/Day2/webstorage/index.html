@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>webStorage</title>
+
+
+</head>
+<body>
+    <input type="text" id="txt1">
+    <button id="btn1">save</button>
+
+    <script src="webStoragee.js"></script>
+    <script>
+        document.querySelector("#btn1").onclick = function(){
+            var val = document.getElementById("txt1").value;
+            mylocalStorage.setItem("Name",val);
+            mylocalStorage.setItem("userID","123-SD")
+            mylocalStorage.setItem("userAge",30);
+            mysessionStorage.setItem("count",50)
+
+            console.log(mylocalStorage.getItem("Name"))
+        }
+    </script>
+</body>
+</html>

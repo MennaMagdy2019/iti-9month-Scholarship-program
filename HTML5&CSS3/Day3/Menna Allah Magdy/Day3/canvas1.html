@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        canvas{
+            border:  1px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="400" height="300"></canvas>
+    <script>
+        var canvas = document.getElementsByTagName("canvas")[0];
+        var ctx = canvas.getContext("2d");
+        
+
+        var grd1 = ctx.createLinearGradient(10,10,10,250)
+        grd1.addColorStop(0,"blue")
+        grd1.addColorStop(0.5,"white")
+        grd1.addColorStop(0.5,"green")
+        grd1.addColorStop(1,"white")
+
+        ctx.fillStyle = grd1;
+        ctx.strokeStyle=grd1;
+        ctx.beginPath();
+        ctx.fillRect(0,0,canvas.width,canvas.height)
+       
+        ctx.moveTo(120,180);
+        ctx.lineTo(120,70)
+        ctx.lineTo(300,70)
+        ctx.lineTo(300,180)
+   
+        ctx.lineWidth=5;
+        ctx.lineJoin = "round";
+
+        ctx.strokeStyle="black";
+       ctx.stroke();
+       // ctx.fillStyle="red"
+        //ctx.fill();
+    
+    </script>
+</body>
+</html>

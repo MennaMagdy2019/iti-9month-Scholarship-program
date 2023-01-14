@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas2</title>
+</head>
+<body>
+    <canvas width="300" height="300"></canvas>
+    <script>
+        var canvas = document.getElementsByTagName("canvas")[0];
+        var ctx = canvas.getContext("2d");
+        
+       var grd2= ctx.createRadialGradient(125,125,50,125,125,100)
+      // grd2.addColorStop(0,"white")
+       grd2.addColorStop(0.1,"blue")
+       grd2.addColorStop(1,"white")
+       //grd2.addColorStop(1,"white")
+
+       ctx.fillStyle = grd2;
+       ctx.beginPath()
+       ctx.arc(125,125,100,0,2*Math.PI)
+     
+       ctx.fill()
+       ctx.font="40pt Georgia";
+        ctx.lineWidth=2
+        ctx.fillStyle="white";
+       ctx.strokeText("M",100,140);
+      ctx.fillText("M",100,140);
+    </script>
+</body>
+</html>

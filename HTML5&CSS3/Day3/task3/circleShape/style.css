@@ -1,0 +1,17 @@
+.circle{
+    width:0px;
+    height: 0px;
+    margin-left: 10px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid red;
+    border-left: 60px solid red;
+    border-bottom: 60px solid red;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    transition:  border-right 2s;
+}
+.circle:hover{
+    border-right: 60px solid red;
+}

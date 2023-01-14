@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas4</title>
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+    <script>
+        var canvas = document.getElementsByTagName("canvas")[0];
+        var ctx = canvas.getContext("2d");
+        
+        ctx.save()
+
+        ctx.fillStyle="blue"
+        ctx.fillRect(250,50,50,100);
+        ctx.rotate((Math.PI/180) * -2);
+        
+        ctx.fillStyle="green"
+        ctx.fillRect(260,50,50,100);
+        ctx.restore();
+
+        // ctx.fillStyle="blue"
+        // ctx.fillRect(30,30,100,100);
+        // //ctx.rotate((Math.PI/180) * 25);
+        
+        // ctx.fillStyle="green"
+        // ctx.fillRect(30,30,100,100);
+        // ctx.restore();
+
+    //     ctx.beginPath();
+    //   ctx.rect(20,10,10,70)
+   
+    //     ctx.lineWidth=5;
+    //     ctx.lineJoin = "round";
+
+    //     ctx.strokeStyle="red";
+    //    ctx.stroke();
+    //    ctx.fillStyle="red"
+    //     ctx.fill();
+
+    //    // ctx.save();
+    //     ctx.rotate(100)
+    //     ctx.stroke();
+    //     ctx.fill();
+
+    //    var img = new Image();
+    //    img.src = "Images/newProp.jpg";
+    //    img.onload = function(){
+    //        ctx.drawImage(img,10,10,500,500)
+    //        ctx.draw
+    //        ctx.beginPath()
+        
+      
+      
+    //        ctx.fill()
+    //    }
+
+    
+    </script>
+</body>
+</html>
+</body>
+</html>

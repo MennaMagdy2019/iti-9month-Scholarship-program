@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>allVideoControls</title>
+</head>
+<body>
+    <video  src="video/frozen.mp4" controls widths="350" height="200" poster="image/frozen.jpg"></video>
+    
+    <div>
+        <input
+        type="range"
+        class="timeVideo"
+        min="0"
+        step="0.01"
+        value="0"
+       />
+       <label class="controlTime">0:00/0:00</label>
+    </div>
+   
+
+    <button onclick="play()">play</button>
+    <button onclick="stop()">stop</button>
+    <button onclick="start()">&lt;&lt;</button>
+    <button onclick="minustime()">&lt;</button>
+    <button onclick="plustime()">&gt;</button>
+    <button onclick="end()">&gt;&gt;</button>
+   
+    <div>
+        <input
+        type="range"
+        class="mutedVideo"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0"
+       />
+       <label class="muted">muted</label>
+    </div>
+   
+
+    <div>
+        <label>speed</label>
+        <input
+        type="range"
+        class="speedVideo"
+        min="0"
+        max="16"
+        step="0.01"
+        value="0"
+       />
+    </div>
+   
+
+    <script src="script.js"></script>
+</body>
+</html>

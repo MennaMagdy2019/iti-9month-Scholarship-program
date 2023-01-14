@@ -1,0 +1,57 @@
+.cart{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border: 3px solid red;
+    border-radius: 10px;
+    /* padding: 5px; */
+}
+/********shap***********/
+#heart{
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin-left: 45px;
+}
+#heart::before,
+#heart::after
+{
+  position: absolute;
+  content: " ";
+  left: 50px;
+  top: -50px;
+  width: 50px;
+  height: 80px;
+  background: black;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-225deg);
+  transform-origin: 0 100%;
+}
+
+#heart::after{
+    left: 0;
+    transform: rotate(225deg);
+    transform-origin: 100% 100%;
+}
+
+#triangle-up{
+    width: 0;
+    height: 0;
+
+    margin-left: 70px;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid black;
+}
+
+.right{
+    font-size: 2rem;
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+}
+.cart h3{
+    font-size: 2rem;
+   margin: 0;
+   padding: 10px;
+}

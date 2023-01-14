@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas2</title>
+</head>
+<body>
+    <canvas width="300" height="300"></canvas>
+    <script>
+        var canvas = document.getElementsByTagName("canvas")[0];
+        var ctx = canvas.getContext("2d");
+
+
+ctx.fillStyle = "#F1F1F1";
+       //ctx.fillRect(0,0,500,500);
+       ctx.beginPath();
+      
+       ctx.arc(100,100,50,0,(Math.PI/180)*360,false);
+       // create linear gradient
+       
+       var grdLinear = ctx.createLinearGradient(0, 0, 120, 170);
+       // dark black
+       grdLinear.addColorStop(0.5, 'blue');
+       grdLinear.addColorStop(1, '#fff');
+     
+      
+       ctx.fillStyle = grdLinear;
+       ctx.lineWidth = 20;
+       ctx.strokeStyle = "rgba(0,0,255,0.5)"
+       ctx.stroke();
+      
+       ctx.fill();
+      
+       ctx.closePath();
+    
+       ctx.font="40pt Georgia";
+        ctx.lineWidth=2
+       ctx.fillStyle="white";
+      // ctx.strokeText("M",75,120);
+      ctx.fillText("M",75,120);
+    </script>
+</body>
+</html>

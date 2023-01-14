@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>line</title>
+    <style>
+        canvas {
+            border: red dotted 5px;
+        }
+        /* #d1{
+            border:5px dashed black;
+            width:700px;
+            height:400px;
+          
+        } */
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <canvas id="canv1" width="300" height="300"></canvas>
+    <script>
+        var canvas = document.getElementById("canv1")
+        var ctx= canvas.getContext("2d")
+        var cnt=0;
+        var timer = setInterval(function(){
+        ctx.beginPath();
+        ctx.moveTo(0,0)
+        ctx.lineTo(++cnt,++cnt);
+        ctx.lineWidth=5;
+        ctx.stroke();
+        ctx.fillStyle="red";
+        ctx.fill();
+        
+        if(cnt==300){
+            clearInterval(timer)
+            alert("animation ended")
+        }
+        },50)
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas4</title>
+</head>
+<body>
+    <canvas width="1000" height="1000" id="myCanvas"></canvas>
+    <script>
+       var canvas = document.getElementById("myCanvas");
+       var ctx = canvas.getContext("2d");
+
+var startAngle = 0;
+var rotatedAngle = 60;
+
+function degtorat (deg){
+  return deg * Math.PI/180;
+}
+
+// degtorat2 looks odd in the first glance but it is not because PI
+// is also used as counter variable with deg no matter whether is's 
+// put after the division
+// -> (deg * PI) / 180 as in degtorat   
+function degtorat2 (deg){
+  return deg / 180 * Math.PI;
+}
+
+setInterval(function(){
+
+  ctx.beginPath();
+  // ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+  // endangle must also be increased by the same amount of startAngle
+//   ctx.arc(100, 75, 50, degtorat(startAngle), degtorat(startAngle)+(1/12) * 2 * Math.PI);
+//   ctx.lineTo(100,75)
+ctx.save()
+
+ctx.fillStyle="blue"
+ctx.fillRect(500,200,20,50);
+ctx.rotate(+60);
+// ctx.lineTo(0,0)
+ctx.strokeStyle="red";
+   ctx.stroke();
+  ctx.closePath();
+  ctx.fill();
+
+  // increase angle at 60 degrees  
+  startAngle += rotatedAngle;
+
+},10);
+
+
+//ctx.fillRect(200, 100, 100, 30);
+        
+
+    // for(let i=0;i<=10;i++){
+
+    //     ctx.fillRect(200, 100, 100, 30);
+    //     // Matrix transformation
+    //     //cnt2++
+    //     ctx.translate(300,300);
+    //     ctx.rotate(+60);
+
+    //    // ctx.translate(-100,50);
+    //   //  ctx.fillRect(200, 100, 100, 30);
+    //  }
+//      for(let i=0;i<=10;i++){
+
+
+// // Matrix transformation
+// //cnt2++
+// ctx.translate(400,200);
+//          ctx.rotate(-60);
+// ctx.fillRect(200, 100, 100, 30);
+// // ctx.translate(-100,50);
+// //  ctx.fillRect(200, 100, 100, 30);
+// }
+
+    // var timer2 = function(){
+        //  var cnt2;
+        //  ctx.fillStyle = 'gray';
+        // ctx.fillRect(200, 100, 100, 30);
+        
+        // // Matrix transformation
+        // cnt2++
+        // ctx.translate(300,250);
+        // ctx.rotate(+60);
+        // ctx.translate(-100,50);
+        
+        // if(cnt2 == 10){
+        //     clearInterval(timer2)}
+        
+           // }
+
+// for(let i=1;i<10;i++){
+//            // Non-rotated rectangle
+// ctx.fillStyle = 'gray';
+// ctx.fillRect(200, 100, 100, 30);
+
+// // Matrix transformation
+
+// ctx.translate(300,250);
+// ctx.rotate(-60);
+//  ctx.translate(-100,50);
+
+// // // Rotated rectangle
+// // ctx.fillStyle = 'white';
+// // ctx.fillRect(80, 60, 140, 30);
+// }
+
+    
+    </script>
+</body>
+</html>
+</body>
+</html>

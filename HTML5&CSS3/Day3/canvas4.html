@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas4</title>
+    <style>
+    </style>
+</head>
+<body>
+    <canvas width="1000" height="1000" id="myCanvas" style="padding-top: 200px;"></canvas>
+<script>
+       var canvas = document.getElementById("myCanvas");
+       var ctx = canvas.getContext("2d");
+      
+       var cnt=1,cnt2=1;
+
+    time=function(){
+        var timer1 = setInterval(function(){
+         ctx.fillStyle = 'rgba(0,195,255,0.5)';
+         ctx.fillRect(200, 100, 100, 30);
+     
+        //  cnt++
+        //  ctx.translate(300,250);
+        //  ctx.rotate(-60);
+        //  ctx.translate(-100,50);
+     
+      
+        cnt++;
+        ctx.translate(300,300);
+        ctx.rotate(+60);
+
+       // ctx.translate(-100,50);
+      //  ctx.fillRect(200, 100, 100, 30);
+      if(cnt == 12){
+         clearInterval(timer1)
+
+        ctx.clearRect(0,0,canvas.width,canvas.height);   
+         cnt=1;
+          timer5()
+      } 
+     },100)
+    }
+
+time();
+
+  timer5=function(){
+   var timer2 = setInterval(function(){
+       ctx.fillStyle = 'rgba(0,195,255,0.5)';
+        ctx.fillRect(200, 100, 100, 30);
+        
+        cnt2++;
+        ctx.translate(400,200);
+          ctx.rotate(-60);
+       // ctx.fillRect(200, 100, 100, 30);
+        if(cnt2 == 12){
+            clearInterval(timer2)  
+            ctx.clearRect(0,0,canvas.width,canvas.height); 
+            cnt2=0;
+            time()
+        }    
+         }
+,100)
+  }
+
+  ctx.fillStyle = 'red';
+ 
+
+
+
+    
+    </script>
+</body>
+</html>
+</body>
+</html>
+-

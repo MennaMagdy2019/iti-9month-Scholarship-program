@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tectColorRange</title>
+</head>
+<body>
+    <form oninput="resColor()">
+       
+        <div>
+            <label>Red</label>
+            <input
+            type="range"
+            id="redColor"
+            min="0"
+            max="255"
+            value="0"
+           />
+        </div>
+        <div>
+            <label>Green</label>
+            <input
+            type="range"
+            id="greenColor"
+            min="0"
+            max="255"
+            value="0"
+           />
+        </div>
+        <div>
+            <label>Blue</label>
+            <input
+            type="range"
+            id="blueColor"
+            min="0"
+            max="255"
+            value="0"
+           />
+        </div>
+        <output name="res" for="redColor greenColor blueColor">
+        
+    </form>
+    <h1 id="colorr">
+        Change the 3 Color Ranges above and observe my color Change
+    </h1>
+    <script src="script.js"></script>
+
+</body>
+</html>

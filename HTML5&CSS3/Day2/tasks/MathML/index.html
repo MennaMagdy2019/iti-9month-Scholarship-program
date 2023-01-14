@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="conditionizr-4.4.0/conditionizr-4.4.0/dist/conditionizr.js"></script>
+    <script src="conditionizr-4.4.0/conditionizr-4.4.0/detects/ie11.js"></script>
+    <script src="conditionizr-4.4.0/conditionizr-4.4.0/detects/chrome.js"></script>
+    <title>MathML</title>
+
+    <script>
+        conditionizr.config({
+            assets: "./assets/",
+            tests: {
+                "chrome": ["style"],
+                "ie11": ["style"],
+
+            }
+        })
+
+         conditionizr.load("MathPoly.js", ["chrome"])
+        conditionizr.load("MathPoly.css", ["chrome"])
+
+        conditionizr.load("MathPoly.js", ["ie11"])
+        conditionizr.load("MathPoly.css", ["ie11"])
+
+    </script>
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" >
+        <text x="40" y="90" transform="rotate(-30 45,50)">c</text>
+        <text x="110" y="90">b</text>
+        <text x="80" y="130">a</text>
+       <polyline points="60, 120 100, 120 100, 40" fill="red" rotate="150"/>
+    </svg>
+
+    <h1>according to pythagoras</h1>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mi>c</mi>
+        <mo>=</mo>
+        <msqrt>
+            <msup>
+                <mrow>
+                    <mi>a</mi>
+                </mrow>
+                <mrow>
+                    <mi>2</mi>
+                </mrow>
+            </msup>
+            <mo>+</mo>
+            <msup>
+                <mrow>
+                    <mi>b</mi>
+                </mrow>
+                <mrow>
+                    <mi>2</mi>
+                </mrow>
+            </msup>
+        </msqrt>
+    </math>
+</body>
+</html>
