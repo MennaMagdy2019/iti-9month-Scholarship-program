@@ -1,0 +1,59 @@
+@import "./colors.scss" ;
+
+.main {
+  
+    &-title{
+       color: $primary;
+    }
+    &-subtitle{
+        color: $seandary;
+    }
+    &-btn{
+        outline: none;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        color: white;
+        background-color: $primary;
+
+        &:hover{
+            background-color: $seandary;
+        }
+    }
+}
+
+
+
+// @each
+$fonts : 18px, 16px ,14px;
+@each $font in $fonts {
+    .font-#{$font} {
+        font-size: $font;
+        }
+}
+
+//another solution 
+// $font:18px;
+// .content{
+//   font-size: $font;
+// }
+// @for $i from 0 through 2 {
+//     .font-#{$font - $i*2} {
+//         font-size: $font - $i*2;
+//     }
+// }
+
+@function half($siz) {
+    @return $siz/2;
+} 
+$size : 100% ;
+.finish-btn{
+   // padding: 10px;
+   padding: 10px;
+    @media (max-width:600px) {
+        width: $size;
+    }
+    @media (min-width:601px) {
+        width: half($size);
+    }
+}

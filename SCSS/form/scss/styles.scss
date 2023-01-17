@@ -1,0 +1,89 @@
+// body{
+//     color: red;
+// }
+
+@import "./colors.scss";
+form{
+    background-color: $primary;
+     padding: 20px;
+    width: 500px;
+    margin: 200px auto;
+    text-align: center;
+   
+    h1{
+      color: $secondary;
+    }
+
+    img{
+        border-radius: 25px;
+        height: 75px;
+        margin: 20px 0;
+    }
+    input{
+        outline: none;
+        padding: 5px;
+       
+        // margin: 5px 0;
+        border: none;
+       
+    }
+    button{
+        cursor: pointer;
+        
+        background-color: $secondary;
+        color: #fff;
+        outline: none;
+        border: 1px solid $secondary;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+
+    div{
+        background-color: white;
+        margin: 5px 0;
+        text-align:start;
+        padding: 7px;
+        color:$secondary ;
+         &:hover{
+            border:  2px solid $secondary ;
+        }
+    }
+}
+
+
+@mixin gridcreator ($numofcols:12 , $screenname : '' , $brekpoint :0){
+    @if($screenname == ""){
+        @media all and (min-width : $brekpoint){
+            @for $i from 1 through $numofcols {
+                .col-#{$i}{
+                    width: 100/($numofcols/$i) *1%;
+                // width:100/ ($numofcols / $i) * 1%;
+                }
+            }
+        }
+    }
+
+    @else{
+       @media all and (min-width:$brekpoint){
+        @for $i from 1 through $numofcols {
+            .col-#{$screenname}-#{$i}{
+                // width: 100/($numofcols / $i) * 1%;
+                width: 100/($numofcols / $i ) *1%;
+            }
+        }
+       }
+    }
+}
+
+// @include gridcreator(12,"" ,0px )
+@include gridcreator(12, "sm" ,576px );
+@include gridcreator(12, "lg" ,992px );
+
