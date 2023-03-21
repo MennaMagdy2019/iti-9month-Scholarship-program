@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Form</title>
+</head>
+<body>
+    <!-- <h1>Plz enter your Info</h1> -->
+    <form action="profile.html" method="post">
+        
+        <!-- <div>
+            <img src="download (1).jfif" alt="">
+        </div> -->
+        <div class="row">
+            <h1 style="text-align: center;">Welcom to Your Form</h1>
+           <div class="col-sm-12 col-lg-5">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="YourName" name="name">
+           </div>
+           <div class="col-sm-12 col-lg-5">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="MobileNumber" name="MobileNumber">
+           </div>
+           <div class="col-sm-12 col-lg-5">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="your email" name="Email">
+            </div>
+            <div class="col-sm-12 col-lg-5">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="your Address" name="Address">
+           </div>
+          
+           <input type="submit" class="sub">
+        </div> 
+        <button onclick="getClients()">Display all</button>
+       
+    </form>
+     <!------------------------table------------->
+     <table>
+        <thread>
+            <tr>
+                <th>name</th>
+                <th>emsil</th>
+                <th>mobile</th>
+                <th>address</th>
+            </tr>
+        </thread>
+        <tbody id="clientsData">
+
+        </tbody>
+    </table>
+  <script>
+    function getClients(){
+        var reqq = new XMLHttpRequest()
+        reqq.open('GET','../serverSide/data.json')
+        reqq.onload = function(params){
+            clients = JSON.parse(this.responseText)
+            var clientsData  = document.getElementById("clientsData");
+           
+        for (client of clients){
+                clientsData.innerHTML += `<tr>
+                <td>${client.name}</td>
+                <td>${client.email}</td>
+                <td>${client.mobile}</td>
+                <td>${client.address}</td>
+                 </tr>`
+      console.log(clientsData);
+            }
+        }
+        reqq.send();
+    }    
+</script>
+    
+   
+</body>
+</html>

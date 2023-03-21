@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>profile</title>
+</head>
+<body>
+    <div>
+        <div class="profile">
+            <h1>Welcome ya {clientName}</h1>
+            <h1>your mobileNum {mobileNum}</h1>
+            <h1>Your email {email}</h1>
+            <h1>Your Address {address}</h1>
+            <button onclick="getClients()">Display all</button>
+       
+        </div>
+        <!------------------------table------------->
+        <table>
+            <thread>
+                <tr>
+                    <th>name</th>
+                    <th>emsil</th>
+                    <th>mobile</th>
+                    <th>address</th>
+                </tr>
+            </thread>
+            <tbody id="clientsData">
+
+            </tbody>
+        </table>
+       
+    </div>
+    <script>
+        function getClients(){
+            var reqq = new XMLHttpRequest()
+            reqq.open('GET','../serverSide/data.json')
+            reqq.onload = function(params){
+                clients = JSON.parse(this.responseText)
+                console.log(clients)
+                var clientsData  = document.getElementById("clientsData");
+               
+                for (client of clients){
+                    clientsData.innerHTML += `<tr>
+            <td>${client.name}</td>
+            <td>${client.email}</td>
+            <td>${client.mobile}</td>
+            <td>${client.address}</td>
+          </tr>`
+          console.log(clientsData);
+                }
+            }
+            reqq.send();
+        }    
+    </script>
+
+    
+    <!-- <script src="./script.js">
+        // var dispall = document.getElementByID("btnn")
+        // var xhr = new XMLHttpRequest()
+        // xhr.open('GET','http://localhost:7002/profile.html')
+        // xhr.onreadystatechange = function(){
+        //     if(xhr.readyState == 4)
+        //        if(xhr.status ==200){
+        //         var dataObj = JSON.parse(xhr.responseText);
+        //         console.log(dataObj)
+
+        //        }
+        // }
+        // dispall.onclick = function(){console.log("ok")}
+
+    </script> -->
+</body>
+</html>
