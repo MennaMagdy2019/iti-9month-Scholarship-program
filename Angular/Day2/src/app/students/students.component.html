@@ -1,0 +1,17 @@
+<h1 style="text-align: center;">Students</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--Directive-->
+    <tr *ngFor="let s of students">
+      <td>{{s.name}}</td>
+      <td>{{s.age}}</td>
+
+    </tr>
+  </tbody>
+</table>

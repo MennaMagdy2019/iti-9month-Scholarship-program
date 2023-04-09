@@ -1,0 +1,43 @@
+<!-- <p>home works!</p> -->
+<table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">age</th>
+        <th scope="col">address</th>
+        <th scope="col">phone</th>
+        <th scope="col">email</th>
+        <th scope="col">salary</th>
+        <th scope="col">details</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of Employees">
+        <th scope="row">{{emp.id}}</th>
+        <td>{{emp.name}}</td>
+        <td>{{emp.age}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.address}}</td>
+        <td>{{emp.phone}}</td>
+        <td>{{emp.salary}}</td>
+        <td><a routerLink="/Employees/{{emp.id}}">Show</a></td>
+        <td><a routerLink="/update/{{emp.id}}">Updata</a></td>
+        <td class="text-danger" style="cursor: pointer;" (click)="deleteEmp(emp.id)">Delete</td>
+      </tr>
+      <!-- <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr> -->
+    </tbody>
+</table>
+

@@ -1,0 +1,11 @@
+.table{
+  width: 50%;
+  margin: auto;
+  background-color: palevioletred;
+}
+.table tr
+{
+  color: #fff;
+  margin: 5px 0;
+  text-align: center;
+}

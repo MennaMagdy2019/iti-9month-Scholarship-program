@@ -1,0 +1,34 @@
+<div class="row form">
+  <h1 style="text-align: center;">Welcom to Your Form</h1>
+ <div class="">
+      <i class="fas fa-user"></i>
+      <input type="text" placeholder="YourName" [(ngModel)]="name">
+ </div>
+ <div class="">
+  <i class="fas fa-user"></i>
+  <input type="number" placeholder="Your Age" [(ngModel)]="age">
+ </div>
+
+ <div *ngIf=" age>=20 && age<=40 && name.length>=3   then trueCond else falseCond" >
+
+ </div>
+ <!-- <div *ngIf=" age && age>=0  then trueCond else falseCond" >
+
+ </div> -->
+ <input type="button" class="sub" value="add" (click)="AddStudent()">
+
+
+ <ng-template #trueCond>
+  <div style="color:green" >
+    Valid Date
+
+  </div>
+ </ng-template>
+ <ng-template #falseCond>
+  <div style="color:red" *ngIf="name && age">
+    please enter correct Data
+
+  </div>
+ </ng-template>
+</div>
+

@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+.row{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.form ,
+.profile
+{
+    background-color: pink;
+    padding: 20px;
+    width: 500px;
+    margin: 100px auto;
+    text-align: center;
+  }
+  .form h1 {
+    color: palevioletred;
+    margin: auto;
+  }
+  .form img {
+    border-radius: 25px;
+    height: 75px;
+    margin: 20px 0;
+  }
+  .form input {
+    outline: none;
+    padding: 5px;
+    border: none;
+  }
+  .form button {
+    cursor: pointer;
+    background-color: palevioletred;
+    color: #fff;
+    outline: none;
+    border: 1px solid palevioletred;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  .row div {
+    background-color: white;
+    margin: 5px 0;
+    text-align: start;
+    padding: 7px;
+    color: palevioletred;
+  }
+  .row div:hover {
+    border: 2px solid palevioletred;
+  }
+
+  .sub ,
+  #btnn{
+    display: block;
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+    margin: auto  !important;
+    margin-top: 10px !important;
+    background-color:palevioletred;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+
+

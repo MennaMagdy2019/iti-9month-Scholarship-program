@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+.imgSlid{
+    width: 50%;
+    margin: auto;
+    background-color: palevioletred;
+    padding: 20px;
+  }
+  
+  .imgSlid img{
+      width: 300px;
+      height: 300px;
+      display: block;
+      margin: auto;
+  
+  }
+  .imgSlid button{
+      cursor: pointer;
+      margin: 10px;
+      padding: 20px;
+      width: 20%;
+      background-color: plum;
+      outline: none;
+      color: #fff;
+      border: #fff;
+  }

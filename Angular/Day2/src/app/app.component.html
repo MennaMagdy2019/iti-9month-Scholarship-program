@@ -1,0 +1,9 @@
+<!-- <h1>Data Parent :{{}}</h1> -->
+<!-------From child to parent-->
+<app-registration (getDataEvent) = "getData($event)"></app-registration>
+
+<!-------From parent to child----->
+<app-students [students] = "students"></app-students>
+
+<!-- <p>Data : {{students.name}}</p> -->
+
